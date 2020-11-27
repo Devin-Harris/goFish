@@ -1,0 +1,91 @@
+
+.user {
+    margin: .5rem 0;
+    padding: 1rem;
+    border: 2px solid $light-grey;
+    border-radius: 1rem;
+    width: 80vw;
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    .info {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        p, h1, h6, h5 {
+            margin: 0rem 1rem;
+            color: $light-grey;
+            font-size: 1rem;
+        }
+        #books {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            #bookValues {
+                display: flex;
+                justify-self: flex-end;
+                align-items: center;
+            }
+            p {
+                margin: 0rem .2rem;
+            }
+            h6 {
+                font-weight: 400;
+                margin: 0rem .2rem;
+            }
+        }
+    }
+    .message {
+        position: absolute;
+        left: 0;
+        width: 100vw;
+        height: 30%;
+        background-color: $dark-red;
+        font-size: 1rem;
+        color: $light-grey;
+        z-index: 15;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-size: 3rem;
+        #message-text {
+            width: auto;
+            h1 {
+                padding: 3rem 15rem;
+                border: 3px solid $light-grey;
+                border-radius: 1rem;
+            }
+            p {
+                font-size: 1rem;
+                font-weight: 500;
+                justify-self: start;
+                padding: 1rem 0;
+                text-align: left;
+            }
+            #found {
+                text-align: right;
+            }
+        }
+    }
+    .message-player {
+        top: 0;
+    }
+    .message-computer {
+        bottom: 0;
+    }
+    .cards {
+        max-width: calc(100% - calc(80vw / 20));
+        height: auto;
+        margin: 0rem 1rem;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, calc(80vw / 20));
+        grid-template-rows: repeat(auto);
+        place-items: center;
+        justify-content: start;
+        align-items: center;
+    }
+    
+}
